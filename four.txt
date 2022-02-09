@@ -1,5 +1,5 @@
-1~../jgame.gif
-2~../oru_athar.jpg
-3~https://moviesdamob.com/Poster/Tamil/Movie/Naai-Sekar-2022.jpg~Naai Sekar
-6~../maadathy-film.jpg
-7~../magas.jpg
+1~jgame.gif
+2~oru_athar.jpg
+3~https://moviesdamob.com/Poster/Tamil/Movie/Naai-Sekar-2022.jpg
+6~maadathy-film.jpg
+7~magas.jpg
