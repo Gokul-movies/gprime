@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../style.css">
+    <title></title>
+</head>
+
+<body>
+
+<div class="ba"></div>
+  <div class="background">
+    <a href="../bot.html">
+    <img style="margin-left: 320px;" src="../q.png" width="25px"></img></a>
+    <h1 class="tex" style="color: white;">Gokul Prime</h1>
+    
+
+      <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: transparent;
+        }
+    
+        li {
+          float: left;
+        }
+    
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 16px;
+          text-decoration: none;
+          font-size: 15px;
+          margin-top: 30px;
+        }
+    
+        li a:hover {
+          background-color: transparent;
+        }
+      </style>
+      <ul>
+        <li><a href="../#home">Trending</a></li>
+        <li><a href="../Tamil.html">Tamil</a></li>
+        <li><a href="../english.html">Hollywood</a></li>
+        <li><a href="../cat.html">Category</a></li>
+        <div class="n"></div>
+        
+        
+
+<div class="slider">
+      <div class="slide active">
+        <a id="asl5" href="../war.html">
+        <img id="sl5" src="../war.jpg" alt="">
+        <div class="info">
+        </div>
+      </div></a><a id="asl4" href="../http://gestyy.com/eoyjqD">
+      <div class="slide">
+        <img id="sl4" height="100px" width="160px" src="../sulthan.jpg" alt="">
+        <div class="info">
+          
+        </div>
+      </div></a><a id="asl3">
+      <div class="slide">
+        <img id="sl3" height="100px" width="160px" src="../it.jpg" alt="">
+        <div class="info">
+          
+        </div>
+      </div></a>
+      <div class="slide">
+        <a id="asl2" href="../chasing.html">
+        <img id="sl2" height="100px" width="160px" src="../chasing.jpg" alt="">
+        <div class="info">
+        </div>
+      </div></a>
+      <div class="slide"><a id="asl1">
+        <img id="sl1" height="100px" width="160px" src="../Winter.jpg" alt=""></a>
+        <div class="info">
+        </div>
+      </div>
+      <div class="navigation">
+        <i class="fas fa-chevron-left prev-btn"></i>
+        <i class="fas fa-chevron-right next-btn"></i>
+      </div>
+      <div class="navigation-visibility">
+        <div class="slide-icon active"></div>
+        <div class="slide-icon"></div>
+        <div class="slide-icon"></div>
+        <div class="slide-icon"></div>
+        <div class="slide-icon"></div>
+      </div>
+    </div>
+    <script type="text/javascript">
+    const slider = document.querySelector(".slider");
+    const nextBtn = document.querySelector(".next-btn");
+    const prevBtn = document.querySelector(".prev-btn");
+    const slides = document.querySelectorAll(".slide");
+    const slideIcons = document.querySelectorAll(".slide-icon");
+    const numberOfSlides = slides.length;
+    var slideNumber = 0;
+
+    //image slider next button
+    nextBtn.addEventListener("click", () => {
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+      slideIcons.forEach((slideIcon) => {
+        slideIcon.classList.remove("active");
+      });
+
+      slideNumber++;
+
+      if(slideNumber > (numberOfSlides - 1)){
+        slideNumber = 0;
+      }
+
+      slides[slideNumber].classList.add("active");
+      slideIcons[slideNumber].classList.add("active");
+    });
+
+    //image slider previous button
+    prevBtn.addEventListener("click", () => {
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+      slideIcons.forEach((slideIcon) => {
+        slideIcon.classList.remove("active");
+      });
+
+      slideNumber--;
+
+      if(slideNumber < 0){
+        slideNumber = numberOfSlides - 1;
+      }
+
+      slides[slideNumber].classList.add("active");
+      slideIcons[slideNumber].classList.add("active");
+    });
+
+    //image slider autoplay
+    var playSlider;
+
+    var repeater = () => {
+      playSlider = setInterval(function(){
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+        slideIcons.forEach((slideIcon) => {
+          slideIcon.classList.remove("active");
+        });
+
+        slideNumber++;
+
+        if(slideNumber > (numberOfSlides - 1)){
+          slideNumber = 0;
+        }
+
+        slides[slideNumber].classList.add("active");
+        slideIcons[slideNumber].classList.add("active");
+      }, 2000);
+    }
+    repeater();
+
+    //stop the image slider autoplay on mouseover
+    slider.addEventListener("mouseover", () => {
+      clearInterval(playSlider);
+    });
+
+    //start the image slider autoplay again on mouseout
+    slider.addEventListener("mouseout", () => {
+      repeater();
+    });
+    </script>
+
+
+
+
+
+        <h1 class="head">On Trending</h1>
+
+
+        <a id="l1" href="../jgame.html">
+        <img id="m1" style="float: left" class="im" src="../jgame.gif" width="160px" height="100px"></img>
+        </a>
+        <a id="l2" href="../http://gestyy.com/eoyjqD">
+        <img id="m2" class="im" src="../sulthan.jpg" width="160px" height="100px"></img></a>
+        <a id="l3" href="../karnan.html">
+        <img id="m3" class="im" src="../karnan.jpg" width="160px" height="100px"></img></a>
+        <a id="l4" href="../chasing.html">
+        <img id="m4" class="im" src="../chasing.jpg" width="160px" height="100px"></img></a>
+        <h1 class="head">Hollywood</h1>
+        <a href="../war.html">
+          <img class="im" src="../war.jpg"></img>
+        </a>
+        <a href="../it.html">
+          <img class="im" src="../it.jpg"></img>
+        </a>
+        <a href="../host.html">
+          <img class="im" src="../Host-movie-poster.jpg"></img>
+        </a>
+        <a href="../winter.html">
+          <img class="im" src="../Winter.jpg"></img>
+        </a>
+
+  </div>
+  </div>
+  
+  
+<script src="script.js"></script>
+  <script>
+    getParameters();
+//alert($_get["a"]);
+    </script> 
+    
+ <script>
+   const xhttp = new XMLHttpRequest();
+var images ="";
+
+
+  xhttp.open("GET", "four.txt", true);
+  xhttp.send();
+  xhttp.onload = function() {
+  //document.getElementById("demo").innerHTML = this.responseText;
+  images+=this.responseText;
+  //alert(movie);
+  ad();
+  m=images.split("\n");
+  for(var z=0;z<4;z++){
+  //alert(m[z]);
+  var g = m[z].split("~");
+  var im = g[1];
+  var link = "vd.html?id="+g[0];
+  //alert("m"+(z+1));
+         document.getElementById("m"+(z+1)).src =im;
+  document.getElementById("l"+(z+1)).href=link;
+         //alert("m"+z);
+       }
+  
+  for(var v=0;v<4;v++){
+    //alert(m[v]);
+  var g = m[v].split("~");
+  var im = g[1];
+  var link = "vd.html?id="+g[0];
+         document.getElementById("sl"+(v+1)).src =im;
+         //alert("m"+im);
+  document.getElementById("asl"+(v+1)).href=link;
+       }
+ // ref();
+  }
+  
+
+
+function ad(){
+
+   /*link+=[4];
+   im=a[2];*/
+  }
+  function ref(){
+    ad();
+    var image = images.split("~");
+    for(var i=1;i<=4;i++){
+      
+      var movie ="";
+
+  xhttp.open("GET", "movie.txt", true);
+  xhttp.send();
+  xhttp.onload = function() {
+  //document.getElementById("demo").innerHTML = this.responseText;
+  movie+=this.responseText;
+  //alert(movie);
+  res();
+  }
+  function res(){
+    var m = movie.split("\n");
+    var id = image[0];
+   // var im = [1];
+for(var z=1;z<=m;z++){
+  alert(m);
+  var g = m[z].split("~");
+  var im = g[1];
+         document.getElementById("m"+z).src ="../"+im;
+         //alert("m"+z);
+       }
+       /*for(var z=m;z<=m;z++){
+  alert(m);
+  var g = m[z].split("~");
+  var im = g[1];
+         document.getElementById("m"+z).src ="../"+im;
+         //alert("m"+z);
+       }*/
+      }
+      
+    }}
+  
+      
+      
+      
+    
+  
+ </script>
+
+</body>
+
+</html>
