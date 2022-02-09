@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>search</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+  <div class="gokul">
+   <input stylle="width: 200px;"class="sear" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+   
+   
+   
+   <img src="search.png" width="20px" style="float: right; margin-top: 30px;margin-right: 40px;border:2px solid deepskyblue;padding-top: 7px;padding-bottom: 12px;padding-left: 5px;border-top-right-radius: 8px;border-bottom-right-radius: 8px;padding-right: 8px;"></img>
+<style>
+.pr{
+  font-size: 20px;
+  float: right;
+  margin-top: 30px;
+  margin-right: 50px;
+}
+.sear{
+  border-top-left-radius: 8px;
+  border: 3px;
+  margin-top: 30px;
+  margin-left: 10px;
+  border-left: cyan;
+  border: 20px;
+  border-color: deepskyblue;
+}
+#myInput{
+  margin-left: 60px;
+  border-right: 1px solid deepskyblue;
+  border-top: 2px solid deepskyblue;
+  border-left: 2px solid deepskyblue;
+  border-bottom: 2px solid deepskyblue;
+  padding: 10px;
+  bordeer-radius: 25px;
+  width:200px;
+  outline: none;
+}
+</style>
+<ul id="myUL">
+  <li><a href="karnan.html"><img width="50%" src="karnan.jpg"><h1 class="pr" >karnan</h1></img> </a></li>
+  <li><a href="alien.html"><img width="50%" src="alien.jpeg" ><h1 class="pr">alien<br>covenant</h1></a></li>
+
+  <li><a href="ak.html"><img width="50%" src="ak.jpg"><h1 class="pr" >Ak vs Ak</h1></img></a></li>
+  <li><a href="sulthan.html"><img width="50%" src="sulthan.jpg"><h1 class="pr" >sulthan</h1></img></a></li>
+
+  <li><a href="oru_athar.html"><img width="50%" src="oru_athar.jpg"><h1 class="pr" >Oru <br>Athar<br>Love</h1></img></a></li>
+  <li><a href="jaya.html"><img width="50%" src="jaya.jpg"><h1 class="pr" >Jaya<br>Janaki</h1></img></a></li>
+  <li><a href="jgame.html"><img width="50%" src="jgame.gif"><h1 class="pr" >Jgame</h1></img></a></li>
+  <li><a href="war.html"><img width="50%" src="war.jpg"><h1 class="pr" >Tomorrow<br>War</h1></img></a></li>
+  <li><a href="kill.html"><img width="50%" src="kill.jpg"><h1 class="pr" >Built<br>To<br>kill</h1></img></a></li>
+  <li><a href="#"><img width="50%" src="lock.jpg"><h1 class="pr" >Locked</h1></img></a></li>
+  <li><a href="miya.html"><img width="50%" src="miya.jpg"><h1 class="pr" >Miya</h1></img></a></li>
+  <li><a href="#"><img width="50%" src="jgame.gif"><h1 class="pr" >Jgame</h1></img></a></li>
+</ul>
+
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+
+</body>
+
+</html>

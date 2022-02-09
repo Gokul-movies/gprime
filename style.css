@@ -1,0 +1,352 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+body {
+    font-size: 15pt;
+}
+.background{
+  background-color: #0e161f;
+  width: 100%;
+  height: 950px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: height;
+}
+.tex{
+  margin-left: 115px;
+  margin-top: 0px;
+  font-size: 20px;
+}
+.ba{
+  background-color: #0e161f;
+  width:100%;
+  height: 20px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+.n{
+  background-color: white;
+  width: 80px;
+  height: 2px;
+  margin-top: 70px;
+  margin-left: 10px;
+}
+.head{
+  color: white;
+  margin-top: 30px;
+  font-size: 20px;
+}
+.im{
+  margin-left: 10px;
+  margin-top: 20px;
+  width: 160px;
+  height: 100px;
+  border-radius: 5px;
+}
+.n2{
+  background-color: white;
+  width: 70px;
+  height: 2px;
+  margin-top: 70px;
+  margin-left: 90px;
+  
+}
+.background2{
+  background-color: #0e161f;
+  width: 100%;
+  height: 800px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: height;
+}
+.new{
+  border-radius: 20px;
+  background-color: #08AAE3;
+  border-color: black;
+  color: black;
+  height: 50px;
+  width: 50%;
+  margin-left:80px;
+  color: white;
+}
+.pos{
+  font-size: 30px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.post{
+  border-radius: 5px;
+  background-color: #08AAE3;
+  color: white;
+  border-color: black;
+  width: 260px;
+  height: 50px;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+.down{
+  margin-top: 25px;
+  margin-right: 15px;
+}
+.n3{
+  background-color: white;
+  width: 90px;
+  height: 2px;
+  margin-top: 10px;
+  margin-left: 20px;
+  
+}
+.background4{
+  background-color: #0e161f;
+  width: 100%;
+  height: 1050px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: height;
+}
+
+
+.slider{
+  position: relative;
+  background: #000116;
+  width: 100%;
+  height: 200px;
+  margin: 0px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slider .slide{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.slider .slide.active{
+  clip-path: circle(150% at 0 50%);
+  transition: 1s;
+}
+
+.slider .slide img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider .slide .info{
+  position: absolute;
+  color: #222;
+  backgground: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  margin-top: 50px;
+  margin-left: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+}
+
+.slider .slide .info h2{
+  font-size: 2em;
+  font-weight: 800;
+}
+
+.slider .slide .info p{
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.navigation{
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.slider:hover .navigation{
+  opacity: 1;
+}
+
+.prev-btn, .next-btn{
+  z-index: 999;
+  font-size: 2em;
+  color: #222;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev-btn{
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.next-btn{
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.navigation-visibility{
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-visibility .slide-icon{
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.5);
+  width: 20px;
+  height: 10px;
+  transform: translateY(-50px);
+  margin: 0 6px;
+  border-radius: 2px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}
+
+.navigation-visibility .slide-icon.active{
+  background: #4285F4;
+}
+
+@media (max-width: 100%){
+  .slider{
+    width: 100%;
+  }
+
+  .slider .slide .info{
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 100%){
+  .slider .slide .info h2{
+    font-size: 1.8em;
+    line-height: 40px;
+  }
+
+  .slider .slide .info p{
+    font-size: 0.9em;
+  }
+}
+.n4{
+  background-color: white;
+  width: 90px;
+  height: 2px;
+  margin-top: 70px;
+  margin-left: 165px;
+  
+}
+
+
+
+
+
+#myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #0e161f; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: white; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dd;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.gokul{
+  background-color: #0e161f;
+  width: 100%;
+  height: 1500px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: height;
+}
+.sear{
+  border-top-left-radius: 8px;
+  border: 3px;
+  margin-top: 30px;
+  margin-left: 10px;
+  border-left: cyan;
+  border: 20px;
+  border-color: deepskyblue;
+}
+#myInput{
+  margin-left: 60px;
+  border-right: 1px solid deepskyblue;
+  border-top: 2px solid deepskyblue;
+  border-left: 2px solid deepskyblue;
+  border-bottom: 2px solid deepskyblue;
+  padding: 10px;
+  bordeer-radius: 25px;
+  width:200px;
+  outline: none;
+}
