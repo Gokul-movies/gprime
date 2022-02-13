@@ -94,13 +94,15 @@ var movie ="";
     var m = movie.split("\n");
     var id = $_get["id"];
     var q = $_get["q"];
+    var con = m.length;
     for(var i =0;i<10;i++){
-      var mov = m[i].split("~");
+      var mov = m[con-1].split("~");
       //alert(mov[0]);
        // alert(mov);
        
        document.getElementById("m"+(i+1)).src=mov[2];
        document.getElementById("l"+(i+1)).href="vd.html?id="+mov[0];
+       con-=1;
     }
   }
 </script>

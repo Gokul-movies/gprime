@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border:none;
+  margin-bottom: 12px;
+  margin-top: 40px;
+  
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #0e161f;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+}
+*{
+  background-color: #0e161f;
+  color: white;
+  outline: none;
+}
+#myUL li a:hover:not(.header) {
+  
+  background-color: deepskyblue;
+}
+</style>
+</head>
+<body>
+
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for movies.." title="Type in a name">
+
+<ul id="myUL">
+
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+
+
+<script type="text/javascript" charset="utf-8">
+  
+  const xhttp = new XMLHttpRequest();
+  var movie = "";
+
+  xhttp.open("GET", "movie.txt", true);
+  xhttp.send();
+  xhttp.onload = function() {
+    //document.getElementById("demo").innerHTML = this.responseText;
+    movie += this.responseText;
+    //alert(movie);
+    res();
+  }
+
+  function res() {
+    var m = movie.split("\n");
+    //var id = $_get["id"];
+    //var q = $_get["q"];
+    var con = m.length;
+    for (var i = 0; i < m.length; i++) {
+      var mov = m[con-1].split("~");
+      //alert(mov[0]);
+        //alert(mov);
+        const para = document.createElement("li");
+para.innerHTML = '<a href="New/vd.html?id='+mov[0]+'"'+'>'+mov[1]+"</a>";
+//para.href="#"+i;
+con-=1;
+// Append to another element:
+document.getElementById("myUL").appendChild(para);
+
+          //document.getElementById("demo1").innerHTML = mov;
+        
+
+    }
+  }
+
+// Create element:
+/*
+for(var i=0;i<=10;i++){
+  
+  const para = document.createElement("li");
+para.innerHTML = '<a href="#'+i+'"'+'>This is a paragraph.'+i+"</a>";
+//para.href="#"+i;
+
+// Append to another element:
+document.getElementById("myUL").appendChild(para);
+
+
+
+  
+
+const para = document.createElement("li");
+para.innerHTML = "This is a paragraph."+i;
+para.href="#"+i;
+
+// Append to another element:
+document.getElementById("myUL").appendChild(para);*/
+</script>
+
+</body>
+</html>
