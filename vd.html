@@ -94,7 +94,9 @@
           document.getElementById("vdo").src=mov[4];
           //alert(mov);
           document.getElementById("vdl1").href=mov[4];
-        
+        document.querySelector('meta[name="og:description"]').setAttribute("content",mov[3];);
+        document.querySelector('meta[name="og:title"]').setAttribute("content",mov[1];);
+        document.querySelector('meta[name="og:image"]').setAttribute("content",mov[2];);
       }
 
     }
@@ -135,6 +137,8 @@ var images ="";
   document.getElementById("l"+(z+1)).href=link;
          //alert("m"+z);
        }}
+  
+  
   
 </script>
 
