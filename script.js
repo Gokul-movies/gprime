@@ -19,3 +19,5 @@ function getParameters() {
 
 }
 
+
+//alert(document.getElementById("body2").height);

@@ -5,19 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="v2.css">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <title></title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/a8f1aa7bb8.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body style="background-color: transparent;">
+<div id="body2" class="body2">
 
 <div class="ba"></div>
   <div class="background">
    
-      <a href="Sr.html"><p style="color:white;margin-left:90%;">
+      <!--<a href="Sr.html"><p style="color:white;margin-left:90%;">
       <i class='fa fa-search'></i></p></a>
     <!--img style="margin-left: 320px;" src="q.png" width="25px"></img></a-->
     <h1 class="tex" style="color: white;">Gokul Prime</h1>
@@ -50,19 +53,111 @@
           background-color: transparent;
         }
       </style>
+      
+  <div class="nav_menu_hid">
       <ul>
         <li><a href="#home">Trending</a></li>
         <li><a href="Tamil.html">Tamil</a></li>
         <li><a href="english.html">Hollywood</a></li>
         <li><a href="cat.html">Category</a></li>
-        <div class="n"></div>
+     </div>
+        <div class="nn"></div>
         
-        
+<div id="cards" class="cards">
+  <a id="asl4"><img id="sl4"></img></a>
+  <a id="asl3"><img id="sl3"></img></a>
+  <a id="asl2" ><img id="sl2"></img></a>
+  <a id="asl1" ><img id="sl1"></img></a>
+</div>
+<div class="dots">
+<div id="d4"></div>
+<div id="d3"></div>
+<div id="d2"></div>
+<div id="d1"></div>
+</div>
+<script>
+var ab = 80;
+var i=4;
+function card(){
+  
+  //alert(i);
+  document.getElementById("d4").style.backgroundColor="transparent";
+  document.getElementById("d3").style.backgroundColor="transparent";
+  document.getElementById("d2").style.backgroundColor="transparent";
+  document.getElementById("d1").style.backgroundColor="transparent";
+  
+  document.getElementById("d1").style.borderRadius="100%";
+   document.getElementById("d2").style.borderRadius="100%";
+   document.getElementById("d3").style.borderRadius="100%";
+   document.getElementById("d4").style.borderRadius="100%";
+   document.getElementById("d1").style.width="5px";
+   document.getElementById("d2").style.width="5px";
+   document.getElementById("d3").style.width="5px";
+   document.getElementById("d4").style.width="5px";
+   
+   
+  
+  if(i!=1){
+  document.getElementById("d"+(i-1)).style.backgroundColor="white";
+  document.getElementById("d"+(i-1)).style.width="15px";
+  document.getElementById("d"+(i-1)).style.borderRadius="20px";
+  
+  
+  }else{
+  document.getElementById("d4").style.backgroundColor="white";
+  }
+  
+  document.getElementById("sl1").style.height="140px";
+  document.getElementById("sl2").style.height="140px";
+  document.getElementById("sl3").style.height="140px";
+  document.getElementById("sl4").style.height="140px";
+  
+   
+  document.getElementById("sl1").style.marginTop="30px";
+  document.getElementById("sl2").style.marginTop="30px";
+  document.getElementById("sl3").style.marginTop="30px";
+  document.getElementById("sl4").style.marginTop="30px";
+  
+  document.getElementById("cards").style.transform="translateX(-"+ab+"%)";
+  if(i==1){
+    document.getElementById("sl"+(i)).style.height="190px";
+    document.getElementById("sl"+(i)).style.marginTop="0px";
+    document.getElementById("sl4").style.height="190px";
+    document.getElementById("sl4").style.marginTop="0px";
+    //i=4;
+  }else{
+    //alert(i);
+    document.getElementById("sl"+(i-1)).style.height="190px";
+    document.getElementById("sl"+(i-1)).style.marginTop="0px";
+  }
+  /*requestAnimationFrame(function () {
+  let boxDiv = document.getElementById("sl"+i);
+  boxDiv.style.height = "140px";
+  });*/
+  //alert(i);
+  //document.getElementById("sl"+i).style.marginTop="30px";
+  
+
+  if(i==1){
+    i=4;
+  }else if(i<=4){
+    i-=1;
+  }
+  //alert(ab);
+  if(ab<=230){
+  ab +=80;
+  }else if(ab>=80){
+    ab=0;
+  }
+}
+setInterval(card,3000);
+//card();
+</script>
 
 <div class="slider">
       <div class="slide active">
         <a id="asl5" href="vd.html?id=7">
-        <img id="sl5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQecYUVsK5DF6rZkNiQQIgZHA196i_FjPTx8Q&usqp=CAU" alt="">
+        <img id="s5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQecYUVsK5DF6rZkNiQQIgZHA196i_FjPTx8Q&usqp=CAU" alt="">
         <div class="info">
         </div>
       </div></a><a id="asl4" href="http://gestyy.com/eoyjqD">
@@ -84,9 +179,9 @@
         <div class="info">
         </div>
       </div></a>
-      <div class="slide"><a id="asl1">
+      <div  class="slide"><a id="asl1">
         <img id="sl1" height="100px" width="160px" src="Winter.jpg" alt=""></a>
-        <div class="info">
+        <div  class="info">
         </div>
       </div>
       <div class="navigation">
@@ -213,10 +308,20 @@
           <img class="im" src="Winter.jpg"></img>
         </a>
 
-  </div>
-  </div>
-  
-  
+ 
+
+
+ </div>
+ </div>
+   <div class="nav_menu">
+   <div class="icons">
+     <a href="Tamil.html">
+     <p class="trend"><i class="fa-solid fa-fire-flame-curved"></i></p></a>
+     <div class="home1"><p class="home"><i class="fa fa-house"></i></p></div>
+    <a href="Sr.html" class="se"> <p class="se"><i class="fa fa-search"></i></p></a>
+   </div>
+ </div>
+
 <script src="script.js"></script>
   <script>
     getParameters();
@@ -307,9 +412,11 @@ for(var z=1;z<=m;z++){
       
       
     
-  
+ var sc = screen.height;
+ document.getElementById("body2").style.height="100vh";
+ //187
+ //(sc-250)+"px";
  </script>
-
 </body>
 
 </html>
