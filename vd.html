@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
-  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="vd_v2.css">
+
+    <meta name="theme-color" content="#0e161f">
 <meta property="og:site_name" content="Pure Surface">
 <meta property="og:title" content="Gprime by gokul">
 <meta property="og:description" content="🍿🎥🎞️🍿Enjoy free unlimited movie at your home🍿🎥🎞️📽️🍿">
@@ -14,6 +17,7 @@
 
 <meta property="og:url" content="">
     <title>Gprime</title>
+    <script src="https://kit.fontawesome.com/a8f1aa7bb8.js" crossorigin="anonymous"></script>
 </head>
 
     
@@ -26,22 +30,39 @@
           <!--<source id="vdl"
 
                 type="video/mp4">-->
-        <img id="im" width="100%" height="200px" src="sulthan.jpg"></img>
+<div id="im"></div>
+        <img id="im_" width="100%" height="200px" src="sulthan.jpg"></img>
         <h1 id="tit" class="pos" style="color: white;">Sulthan</h1>
         <p class="pos" style="font-size: 15px; color: #08AAE3; font-weight: bolder;" style="color:white;">Gokul prime</p>
-          <button class="post" onclick="openFullscreen()">Watch now</button>
-          <a id="vdl1">
-          <img class="down" src="button.jpg" width="60px" height="60px" style="float: right;"></img></a>
+<div id="about" class="about">
+</div>
+        
+<a onclick="openFullscreen()">
+<div class="play_bt_bg">
+</div>
+<div class="play_bt">
+  <i class="fa-solid fa-play"></i>
+</div>
+</a>
+<a id="vdl1">
+          <button class="post" >Download <i class="fa-solid fa-download"></i></button>
+</a>
+          <!--<a id="vdl1_">
+ <img class="down" src="button.jpg" width="60px" height="60px" style="float: right;"></img></a> -->
         <p id="det" style="color:white;font-size: 15px;margin-top: 30px;margin-left: 20px;">Sulthan is a 2021 Indian Tamil-language action drama film written and directed by Bakkiyaraj Kannan, produced by S. R. Prakash Babu and S. R. Prabhu under the banner Dream Warrior Pictures.</p>
    <h1 style="color: white; font-size: 20px;margin-top: 30px;margin-left: 20px;">Related</h1>
          <div class="n3"></div>
+<div class="ret">
          <a id="l1" href="jgame.html">
-           <img id="m1" style="float: left" class="im" src="jgame.gif" width="160px" height="100px"></img>
+           <img id="m1" style="float: left" class="im_n" src="jgame.gif" width="160px" height="100px"></img>
          </a><a id="l2" href="sulthan.html">
-           <img id="m2" class="im" src="sulthan.jpg" width="160px" height="100px"></img></a><a id="l3" href="karnan.html">
-           <img id="m3" class="im" src="karnan.jpg" width="160px" height="100px"></img></a>
+           <img id="m2" class="im_n" src="sulthan.jpg" width="160px" height="100px"></img></a><a id="l3" href="karnan.html">
+           <img id="m3" class="im_n" src="karnan.jpg" width="160px" height="100px"></img></a>
          <a id="l4" href="chasing.html">
-           <img id="m4" class="im" src="chasing.jpg" width="160px" height="100px"></img></a>
+           <img id="m4" class="im_n" src="chasing.jpg" width="160px" height="100px"></img></a>
+</div>
+ <h1 style="color: white; font-size: 20px;margin-top: 30px;margin-left: 20px;">Hollywood</h1>
+<div class="ret">
          <a href="alien.html">
            <img class="im" src="alien.jpeg"></img>
          </a>
@@ -54,12 +75,94 @@
          <a href="Winter.html">
            <img class="im" src="Winter.jpg"></img>
          </a>
+</div>
+
+<div class="music">
+  <div class="m_icon"></div>
+  
+  <h1 id="ml8_" class="ml9"> <i class="fa-solid fa-music"></i>
+  <span id="ml8" class="text-wrapper">
+    <span id="ml9_" class="letters">Song Name</span>
+  </span>
+</h1>
+<div class="movn">
+<h5 id="mvn"></h5>
+</div>
+
+<script>
+var on_off = 0;
+      function play() {
+        if(on_off==0){
+        var audio = document.getElementById("audio");
+        audio.play();
+        document.getElementById("m_ic").className="fa-solid fa-pause";
+        on_off+=1;
+        }else{
+          var audio = document.getElementById("audio");
+          audio.pause();
+          document.getElementById("m_ic").className="fa-solid fa-play";
+          on_off=0;
+        }
+      }
+    </script>
+
+    
+    <audio id="audio" src="https://tamilpaatu.com/downloader/aadSmLDGsvGbQHaI-xsd6A/1648982741/d128_cdn/21295"></audio>
+
+  <div onclick="play()" class="play_m">
+    <i id="m_ic" class="fa-solid fa-play"></i>
+  </div>
+</div>
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<style>
+/*
+.ml9 {
+  position: relative;
+  font-weight: 200;
+  font-size: 4em;
+}
+
+.ml9 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+*/
+.ml9{
+  margin-left: 0px;
+  position: absolute;
+  top: -20px;
+  left: 25%;
+}
+.ml9>i{
+  font-size: 12px;
+  color: white;
+}
+.ml9 .letter {
+  transform-origin: 50% 100%;
+  display: inline-block;
+  font-size: 12px;
+  color: white;
+  /*line-height: 1em;*/
+}
+</style>
+  
 <script src="script.js" type="text/javascript" charset="utf-8"></script>
 <script>
+
   getParameters();
   //var id = $_get["id"];
 </script>
 <script type="text/javascript" charset="utf-8">
+var name = "";
   const xhttp = new XMLHttpRequest();
   var movie = "";
 
@@ -81,18 +184,47 @@
       //alert(mov[0]);
       if (mov[0] == id) {
         // alert(mov);
-          document.getElementById("im").src = mov[2];
+          document.getElementById("im").style.backgroundImage ="linear-gradient(to bottom, rgba(0, 0,0, 0.1),#0e161f),url("+ mov[2]+")";
           document.getElementById("tit").innerHTML=mov[1];
+          name+=mov[1];
+    //alert(name);
+           document.getElementById("mvn").innerHTML=mov[1];
           document.getElementById("det").innerHTML=mov[3];
           document.getElementById("vdo").src=mov[4];
           //alert(mov);
           document.getElementById("vdl1").href=mov[4];
+          document.getElementById("ml8").innerHTML= "<span class='text-wrapper'><span class='letter'>"+mov[5]+"</span></span>";
+      document.getElementById("audio").src=mov[6];
         
       }
 
     }
-  }
   
+
+//name = mov[1];
+//alert("name":+name);
+//alert("name:"+name);
+fetch('https://api.codetabs.com/v1/proxy?quest=https://masstamilan.so/'+name.toLowerCase()+'-songs/').then((response) => response.text()).then((text) => cp(text));
+/*Share
+  fetch(' https://masstamilan.in/valimai-s/').then((response) => response.text()).then((text) => cp(text));
+  */
+  }
+  function cp(t){
+    //alert(t);
+     t=t.replace("<br/>","");
+    t=t.split("<b>");
+    t_n=t[1].replace("Starring:","");
+   
+    t_n=t_n.split(",");
+    document.getElementById("about").innerHTML=t_n[0]+" / ";
+    document.getElementById("about").innerHTML+=t[3].replace("<br/>","")+" / ";
+    //alert(t[3]);
+    document.getElementById("about").innerHTML+=t[5].replace("<br/>","")+" / ";
+      document.getElementById("about").innerHTML+=t[2].replace("<br/>","");
+    //alert(t[5]);
+  }
+
+
   var elem = document.getElementById("vdo");
 function openFullscreen() {
  if (elem.requestFullscreen) {
@@ -133,6 +265,41 @@ var images ="";
   
 </script>
 
+
+
+<script>
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml9 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml9 .letter',
+    scale: [0, 1],
+    duration: 1500,
+    elasticity: 600,
+    delay: (el, i) => 45 * (i+1)
+  }).add({
+    targets: '.ml9',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+ </script>
+
+
+
+
+
+
+
+
+
+<script>
+//var name = document.getElementById("tit").innerText;
+
+</script>
 
 </body>
 
