@@ -44,6 +44,17 @@
   <i class="fa-solid fa-play"></i>
 </div>
 </a>
+
+<div onclick="show()" id="parts">
+  <h5 id="n_p">Part: 2/3</h5>
+  <img id="p_img" class="p_img"/>
+  <p id="p_name"></p>
+  <div id="more"><i class="fa-solid fa-angle-up"></i></div>
+</div>
+<div id="p_all">
+  <h5>Part:<span style="font-weight: normal" id="all_np"></span></h5>
+  <div onclick="cls()" class="close"><i class="fa-solid fa-xmark"></i></div>
+</div>
 <a id="vdl1">
           <button class="post" >Download <i class="fa-solid fa-download"></i></button>
 </a>
@@ -90,6 +101,14 @@
 </div>
 
 <script>
+function show(){
+  document.getElementById("p_all").style.display="block";
+}
+function cls(){
+  document.getElementById("p_all").style.display="none";
+}
+
+
 var on_off = 0;
       function play() {
         if(on_off==0){
@@ -162,6 +181,7 @@ var on_off = 0;
   //var id = $_get["id"];
 </script>
 <script type="text/javascript" charset="utf-8">
+var con = 1;
 var name = "";
   const xhttp = new XMLHttpRequest();
   var movie = "";
@@ -179,20 +199,110 @@ var name = "";
     var m = movie.split("\n");
     var id = $_get["id"];
     var q = $_get["q"];
+    var p = $_get["p"];
+    
+    
     for (var i = 0; i < m.length; i++) {
       var mov = m[i].split("~");
       //alert(mov[0]);
       if (mov[0] == id) {
         // alert(mov);
           document.getElementById("im").style.backgroundImage ="linear-gradient(to bottom, rgba(0, 0,0, 0.1),#0e161f),url("+ mov[2]+")";
+    if(p>0){
+    p=p;
+    }else {
+    if(mov[1].includes(",")){
+      var p1 = mov[1].split(",");
+      p= p1[1];
+    }else{
+      p=p;
+    }
+      
+    }
+    if(p>0){
+      //alert(p);
+      var n_t= mov[1].split(",");
+      document.getElementById("tit").innerHTML=n_t[0]+" "+p;
+      name+=n_t[0];
+      
+      
+      document.getElementById("mvn").innerHTML=mov[1];
+      var det= mov[4].split(",");
+      document.getElementById("det").innerHTML=mov[3];
+      document.getElementById("vdo").src=det[p-1];
+      //alert(mov);
+      document.getElementById("vdl1").href=det[p-1];
+      document.getElementById("p_img").src=mov[2];
+      var p1 = mov[1].split(",");
+      document.getElementById("p_name").innerHTML=n_t[0]+" "+p1[1];
+      document.getElementById("n_p").innerHTML="Part: "+p+"/"+p1[1];
+    document.getElementById("all_np").innerHTML=p+"/"+p1[1];
+      
+    if(con<=p1[1]){
+      for(var i=0;con<=p1[1];i++){
+        
+const cb = document.createElement("div");
+cb.id="ab"+i;
+cb.style.position="relative";
+/*cb.style.borderBottom="1px solid grey";
+cb.style.display="flex";
+cb.style.alignItems="center";
+cb.style.justifyContent="center";*/
+//div.id="ab"+i;
+document.getElementById("p_all").appendChild(cb);
+const para = document.createElement("img");
+para.src = mov[2];
+para.style.height="80px";
+para.style.width="150px";
+para.className="m_img";
+document.getElementById("ab"+i).appendChild(para);
+
+
+
+const par = document.createElement("a");
+par.innerHTML=n_t[0]+(i+1);
+par.style.position="absolute";
+par.style.right="15%";
+par.style.top="30px";
+par.style.fontWeight="bold";
+par.style.fontSize="15px";
+par.style.color="white";
+par.href="http://0.0.0.0:8080/vd.html?id="+id+"&p="+(i+1);
+document.getElementById("ab"+i).appendChild(par);
+
+
+
+
+
+const para1 = document.createElement("br");
+document.getElementById("ab"+i).appendChild(para1);
+
+
+
+        con++;
+      }
+    
+    //alert(con);
+    //con+=1;
+  }
+  document.getElementById("ab"+(p-1)).style.backgroundColor="deepskyblue";
+
+    }
+    
+    
+    else{
+      document.getElementById("parts").style.display="none";
           document.getElementById("tit").innerHTML=mov[1];
           name+=mov[1];
+    
     //alert(name);
            document.getElementById("mvn").innerHTML=mov[1];
           document.getElementById("det").innerHTML=mov[3];
           document.getElementById("vdo").src=mov[4];
           //alert(mov);
           document.getElementById("vdl1").href=mov[4];
+          //alert(mov[4]);
+    }
           document.getElementById("ml8").innerHTML= "<span class='text-wrapper'><span class='letter'>"+mov[5]+"</span></span>";
       document.getElementById("audio").src=mov[6];
         
@@ -204,6 +314,7 @@ var name = "";
 //name = mov[1];
 //alert("name":+name);
 //alert("name:"+name);
+name = name.replace(" ","-");
 fetch('https://api.codetabs.com/v1/proxy?quest=https://masstamilan.so/'+name.toLowerCase()+'-songs/').then((response) => response.text()).then((text) => cp(text));
 /*Share
   fetch(' https://masstamilan.in/valimai-s/').then((response) => response.text()).then((text) => cp(text));
