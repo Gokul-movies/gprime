@@ -16,8 +16,10 @@
   background-color: #0e161f;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  position: absolute;
-  top: 83vh;
+  position: fixed;
+  bottom:0px;
+  z-index: 2;
+  /*top: 83vh;*/
   /*
   margin-top: 138%;
   top: 92%;
@@ -213,4 +215,10 @@ input[type="text"], textarea, [contenteditable]
     -moz-user-select: text;
     -ms-user-select: text;
     user-select: text;
+}
+.body2{
+  background-color: #0e161f;
+}
+#container{
+  background-color: #0e161f;
 }
